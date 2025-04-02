@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library Books - GA4 Tracked</title>
+    <title>Shivani's Library</title>
 
     <!-- Google Analytics 4 (GA4) Tag -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FWC90882EE"></script>
@@ -13,16 +13,60 @@
         gtag('js', new Date());
         gtag('config', 'G-FWC90882EE');
     </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff5e6; /* Crème background */
+            color: #8b0000; /* Dark red text */
+            text-align: center;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #a52a2a; /* Brownish-red */
+        }
+        #books button {
+            background-color: #8b0000; /* Dark red */
+            color: #fff5e6; /* Crème text */
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        #books button:hover {
+            background-color: #a52a2a;
+        }
+        #about {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #a52a2a;
+            color: #fff5e6;
+            border-radius: 10px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to the Library</h1>
-    <p>Explore books from different categories.</p>
+    <h1>Welcome to Shivani's Library</h1>
+    <p>Explore books from different categories and discover new worlds!</p>
 
     <h2>Books</h2>
     <div id="books">
         <button onclick="trackBookEvent('The Great Gatsby', 'Fiction')">The Great Gatsby</button>
         <button onclick="trackBookEvent('Introduction to Algorithms', 'Computer Science')">Introduction to Algorithms</button>
         <button onclick="trackBookEvent('A Brief History of Time', 'Science')">A Brief History of Time</button>
+    </div>
+
+    <div id="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm Shivani! Ever since I was a child, books have been my escape into different worlds.  
+           From fiction to science, every book holds a new adventure. I started collecting books  
+           because I believe stories should be shared. This website is my way of doing just that—  
+           sharing my collection with everyone who loves books as much as I do!</p>
     </div>
 
     <script>
