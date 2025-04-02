@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FWC90882EE"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-FWC90882EE');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GA4 Test Website</title>
-    <!-- GA4 Tracking Code will be added here -->
+    <title>Library Books - GA4 Tracked</title>
+
+    <!-- Google Analytics 4 (GA4) Tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FWC90882EE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-FWC90882EE');
+    </script>
 </head>
 <body>
-    <h1>Welcome to My GA4 Test Website</h1>
-    <p>This is a simple site hosted on GitHub Pages.</p>
+    <h1>Welcome to the Library</h1>
+    <p>Explore books from different categories.</p>
+
+    <h2>Books</h2>
+    <div id="books">
+        <button onclick="trackBookEvent('The Great Gatsby', 'Fiction')">The Great Gatsby</button>
+        <button onclick="trackBookEvent('Introduction to Algorithms', 'Computer Science')">Introduction to Algorithms</button>
+        <button onclick="trackBookEvent('A Brief History of Time', 'Science')">A Brief History of Time</button>
+    </div>
+
+    <script>
+        function trackBookEvent(book, category) {
+            gtag('event', 'Book Clicked', {
+                'book_name': book,
+                'book_category': category
+            });
+        }
+    </script>
 </body>
 </html>
