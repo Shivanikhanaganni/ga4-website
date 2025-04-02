@@ -18,56 +18,132 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #fff5e6; /* Crème background */
-            color: #8b0000; /* Dark red text */
+            color: #5a1a1a; /* Dark red text */
             text-align: center;
             padding: 20px;
         }
-        h1, h2 {
-            color: #a52a2a; /* Brownish-red */
+        header {
+            background-color: #8b0000;
+            color: #fff5e6;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
         }
-        #books button {
-            background-color: #8b0000; /* Dark red */
-            color: #fff5e6; /* Crème text */
-            border: none;
-            padding: 10px 20px;
+        h2 {
+            color: #a52a2a;
+        }
+        .book-category {
+            margin: 20px 0;
+        }
+        .book-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .book {
+            background-color: #a52a2a;
+            color: #fff5e6;
+            padding: 15px;
             margin: 10px;
+            border-radius: 8px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        .book button {
+            background-color: #8b0000;
+            color: #fff5e6;
+            border: none;
+            padding: 10px;
+            margin-top: 10px;
             cursor: pointer;
-            font-size: 16px;
             border-radius: 5px;
         }
-        #books button:hover {
-            background-color: #a52a2a;
+        .book button:hover {
+            background-color: #660000;
         }
         #about {
             margin-top: 40px;
             padding: 20px;
-            background-color: #a52a2a;
+            background-color: #8b0000;
             color: #fff5e6;
             border-radius: 10px;
-            max-width: 600px;
+            max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            text-align: left;
+        }
+        footer {
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #a52a2a;
+            color: #fff5e6;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to Shivani's Library</h1>
-    <p>Explore books from different categories and discover new worlds!</p>
+    <header>Welcome to Shivani's Library</header>
+    <p>Explore books from different categories and discover new worlds through literature.</p>
 
-    <h2>Books</h2>
-    <div id="books">
-        <button onclick="trackBookEvent('The Great Gatsby', 'Fiction')">The Great Gatsby</button>
-        <button onclick="trackBookEvent('Introduction to Algorithms', 'Computer Science')">Introduction to Algorithms</button>
-        <button onclick="trackBookEvent('A Brief History of Time', 'Science')">A Brief History of Time</button>
-    </div>
+    <section class="book-category">
+        <h2>Fiction</h2>
+        <div class="book-list">
+            <div class="book">
+                <h3>The Great Gatsby</h3>
+                <p>A classic novel by F. Scott Fitzgerald that explores themes of wealth, love, and the American Dream.</p>
+                <button onclick="trackBookEvent('The Great Gatsby', 'Fiction')">Read More</button>
+            </div>
+            <div class="book">
+                <h3>To Kill a Mockingbird</h3>
+                <p>Harper Lee's masterpiece on justice and racial inequality in the Deep South.</p>
+                <button onclick="trackBookEvent('To Kill a Mockingbird', 'Fiction')">Read More</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="book-category">
+        <h2>Science</h2>
+        <div class="book-list">
+            <div class="book">
+                <h3>A Brief History of Time</h3>
+                <p>Stephen Hawking's journey through space, time, and the universe.</p>
+                <button onclick="trackBookEvent('A Brief History of Time', 'Science')">Read More</button>
+            </div>
+            <div class="book">
+                <h3>The Selfish Gene</h3>
+                <p>Richard Dawkins explains evolution and natural selection in a revolutionary way.</p>
+                <button onclick="trackBookEvent('The Selfish Gene', 'Science')">Read More</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="book-category">
+        <h2>Technology & Computing</h2>
+        <div class="book-list">
+            <div class="book">
+                <h3>Introduction to Algorithms</h3>
+                <p>A must-read for programmers, this book covers data structures and algorithms in depth.</p>
+                <button onclick="trackBookEvent('Introduction to Algorithms', 'Computer Science')">Read More</button>
+            </div>
+            <div class="book">
+                <h3>Clean Code</h3>
+                <p>Robert C. Martin's book on writing maintainable and efficient code.</p>
+                <button onclick="trackBookEvent('Clean Code', 'Computer Science')">Read More</button>
+            </div>
+        </div>
+    </section>
 
     <div id="about">
         <h2>About Me</h2>
-        <p>Hi, I'm Shivani! Ever since I was a child, books have been my escape into different worlds.  
-           From fiction to science, every book holds a new adventure. I started collecting books  
-           because I believe stories should be shared. This website is my way of doing just that—  
-           sharing my collection with everyone who loves books as much as I do!</p>
+        <p>Hello, I'm Shivani! Ever since I was a child, I have been fascinated by books. They have taken me to different worlds,  
+        introduced me to new ideas, and helped me understand the world better. I started collecting books as a way to preserve  
+        these wonderful stories and share them with others. This website is my personal library where I want everyone to find  
+        something they love—whether it's fiction, science, or technology. I hope you enjoy exploring these books as much as I do!</p>
     </div>
+
+    <footer>
+        <p>© 2025 Shivani's Library | Made with ❤️ for book lovers</p>
+    </footer>
 
     <script>
         function trackBookEvent(book, category) {
@@ -79,3 +155,4 @@
     </script>
 </body>
 </html>
+
